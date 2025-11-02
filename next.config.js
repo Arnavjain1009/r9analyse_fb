@@ -5,6 +5,9 @@ const nextConfig = {
   assetPrefix: '/r9analyse_fb/',
   reactStrictMode: true,
   swcMinify: true,
+  images: {
+    unoptimized: true,
+  },
   webpack: (config, { isServer }) => {
     if (!isServer) {
       config.resolve.fallback.fs = false;
